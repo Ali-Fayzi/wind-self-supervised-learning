@@ -66,7 +66,7 @@ def train_model(model, train_dataloader,val_dataloader, criterion, optimizer, nu
             torch.save(model.state_dict(), f"./checkpoint/model_{epoch}_{val_loss:.4f}.pth")
             torch.save(model.encoder.state_dict(), f"./checkpoint/encoder_{epoch}_{val_loss:.4f}.pth")
             torch.save(model.decoder.state_dict(), f"./checkpoint/decode_{epoch}_{val_loss:.4f}.pth")
-        print('Training complete')
+    print('Training complete')
     return model
 
 class Model(nn.Module):
